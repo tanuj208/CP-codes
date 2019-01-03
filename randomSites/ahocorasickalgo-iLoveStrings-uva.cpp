@@ -40,7 +40,7 @@ ll power(ll x, ll y)
 typedef struct xx{
 	struct xx *ptr[60];
 	struct xx *suffixLink;
-	// suffixLink stores that node which is last node of prefix where prefix===>largest prefix = largest suffix of given node
+	// suffixLink stores last node of prefix where prefix===>largest prefix = largest suffix of given node (current one)
 	struct xx *p;
 	// p is parent
 	char c;
@@ -88,13 +88,14 @@ node* suffix(node *head)
 	for(i=0;i<60;i++)
 		if(head->ptr[i]!=NULL)
 			head->ptr[i]->suffixLink=head;
+	// setting suffixLink for root and its immediate childs to root
+
 	queue<node*> q;
 	for(i=0;i<60;i++)
 		if(head->ptr[i]!=NULL)
 			for(j=0;j<60;j++)
 				if(head->ptr[i]->ptr[j]!=NULL)
 					q.push(head->ptr[i]->ptr[j]);
-	// setting suffixLink for root and its immediate childs to root
 
 	// bfs
 	while(!q.empty())
