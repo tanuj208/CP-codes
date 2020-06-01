@@ -1,0 +1,4 @@
+Let's fix the number of superheroes we remove to be $i$ ($\le$ the total number of operations allowed, i.e $m$). Since we want to maximize the final average power, we only delete the smallest $i$ elements. Also, since we have fixed the number of superheroes left, we only need the sum of powers of rest of the superheroes, and not the actual powers.
+
+We still have $m - i$ operations left which we will use to increase the power of the rest of the superheroes. We have $n - i$ superheroes remaining. But we can only make $k$ operations on one superhero, so we can only add $k*(n-i)$ to the sum of their power.So, their power can be increased by $min(m - i, k * (n - i))$. Hence, answer for this fixed $i$ would be (sum of ($n - i$) greatest elements + min(m-i, k*(n-i))) / (n - i).
+Answer would max over all $i$ for $i$ $\le$ $m$.

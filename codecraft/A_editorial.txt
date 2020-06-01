@@ -1,0 +1,3 @@
+Check lengths of $s$ and $t$. If they are different, $s$ can never be converted to $t$ and answer is "No".
+
+If for all indexes $i$ either both $s[i]$ and $t[i]$ are vowels or both $s[i]$ and $t[i]$ are consonants, then answer is "Yes", else answer is "No".

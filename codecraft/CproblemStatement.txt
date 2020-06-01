@@ -1,0 +1,5 @@
+Thanos wants to destroy the avengers base, but he needs to destroy the avengers along with their base.
+Let we represent their base with an array, where each place can be occupied by atmost one avenger and each avenger occupy exactly one place. Length of their base is a perfect power of 2. Destroying a place costs Thanos some of his power. He wants to destroy their place using minimum power. He starts with whole base and he can do either of following
+1. Divide the base into 2 equal halves and destroy them separately.
+2. Destroy it. If it contains no avenger in it, then it takes his A amount of power, else it takes his B * (number of avengers in that portion of base) * (length of that portion of base) amount of power.
+Output the minimum power needed by Thanos to destroy the avengers base.
